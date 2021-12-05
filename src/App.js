@@ -1,54 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import Header from './components/Header/Header';
-import Products from './components/Products/Products';
-import Product from './components/Product/Product';
-import Counter from './components/Counter/Counter';
-import CartContext from './CartContext';
-import Cart from './components/Cart/Cart';
-import TotalContext from './TotalContext';
+import Counter from "./components/Counter/Counter";
+import { Route, Routes } from "react-router";
+import { Link } from "react-router-dom";
+import "./App.css";
+import About from "./pages/About";
+import Home from "./pages/Home/Home";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
-
-  const [initProducts, setInitProducts] = useState([]);
-  const [products, setProducts] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [carts, setCarts] = useState([]);
-
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then(response => response.json())
-      .then(data => {
-        setInitProducts(data);
-        setProducts(data);
-      });
-  }, []);
-
-
-  const categories = initProducts.map(p => p.category).filter((value, index, array) => array.indexOf(value) === index);
-
-  const handleChange = (e) => {
-    if (e.target.value === 'all') {
-      setProducts(initProducts);
-    } else {
-      const filterProducts = initProducts.filter((product) => product.category === e.target.value);
-      setProducts(filterProducts);
-    }
-  };
-
-  
   return (
     <div>
-        <CartContext.Provider value={[carts, setCarts]}>
-          <TotalContext.Provider value={[total, setTotal]}>
-          <Header categories={categories} handleChange={handleChange} />
-          <Counter />
-          <Products products={products} />
-          </TotalContext.Provider>
-        </CartContext.Provider>
-    </div >
+      <Link to="/">Home page</Link>
+      <br />
+      <Link to="/about">About our shop</Link>
+      <br />
+      <br />
+      <Counter />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/productdetails/:id" element={<ProductDetails />} />
+      </Routes>
+    </div>
   );
-
 }
-
 export default App;
