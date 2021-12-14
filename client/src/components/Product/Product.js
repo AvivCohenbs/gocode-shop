@@ -66,7 +66,7 @@ function Product({ title, price, image, id }) {
   return (
     <div className="product-card">
       <div className="product-image">
-        <img src={image} alt="shir" />
+        <img src={image} alt="aviv" />
       </div>
 
       <div className="product-info">
