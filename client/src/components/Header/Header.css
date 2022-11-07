@@ -1,4 +1,25 @@
-h1,
+.main-title {
+  font-family: 'Poppins';
+  font-size: 90px;
+  margin-left: 290px;
+  display: flex;  
+  justify-content: left;
+  margin-top: 20px;
+}
+
+.sort-filter-range {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 340px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.sort-filter {
+  display: flex;
+}
+
+/* h1,
 label,
 nav {
   margin: 0;
@@ -85,4 +106,4 @@ label {
     min-width: 120px;
     padding: 0 25px;
   }
-}
+} */
