@@ -1,5 +1,5 @@
 import "./Header.css";
-import Cart from "../Cart/Cart";
+// import Cart from "../Cart/Cart";
 import { useContext, useState } from "react";
 import TotalContext from "../../TotalContext";
 import Box from "@mui/material/Box";
@@ -21,7 +21,7 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
       </div>
       <div className="sort-filter-range">
         <div className="price-range">
-          <Box sx={{ width: 300 }}>
+          <Box sx={{ width: 330 }}>
             Price Range ${minMax[0]} - ${minMax[1]}
             <Slider
               min={minMax[0]}
@@ -30,7 +30,7 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
               value={price}
               onChange={handleChange}
               valueLabelDisplay="auto"
-              color="secondary"
+              color="primary"
             />
           </Box>
         </div>

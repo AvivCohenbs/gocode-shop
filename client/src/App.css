@@ -1,19 +1,19 @@
 .all-nav {
     display: flex;
     justify-content: space-evenly;
-    gap: 715px;
+    gap: 750px;
     margin-top: 60px;
     align-items: center;
 }
 
 .go-link {
-    font-size: 30px;
+    font-size: 20pt;
     text-decoration: none;
     cursor: pointer;
 }
 
 .home-about {
-  font-size: 20px;
+  font-size: 20pt;
 }
 
 .about-link {

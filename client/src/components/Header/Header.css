@@ -1,7 +1,7 @@
 .main-title {
   font-family: 'Poppins';
   font-size: 90px;
-  margin-left: 290px;
+  margin-left: 170px;
   display: flex;  
   justify-content: left;
   margin-top: 20px;
@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-evenly;
   gap: 340px;
-  margin-top: 30px;
+  margin-top: 50px;
   align-items: center;
 }
 

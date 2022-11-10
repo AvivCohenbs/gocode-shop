@@ -64,27 +64,28 @@ function Product({ title, price, image, id }) {
   }, [addProduct, carts, setTotal]);
 
   return (
-    <div className="product-card">
-      <div className="product-image">
-        <img src={image} alt="aviv" />
+    <div className="card-info">
+      <div className="product-card">
+        <div className="product-image">
+          <img className="pro-img" src={image} alt="img" />
+        </div>
       </div>
-
       <div className="product-info">
-        <Link to={`/products/${id}`}>
-          <h5>{title}</h5>
+        <Link className="link-pro" to={`/products/${id}`}>
+          <div className="pro-title">{title}</div>
         </Link>
-
-        <h6>${price}</h6>
-
-        <button className="re1" onClick={removeProduct}>
-          {" "}
-          -{" "}
-        </button>
-        <span className="emz"> {product} </span>
-        <button className="re2" onClick={addProduct}>
-          {" "}
-          +{" "}
-        </button>
+        <div className="price-add">
+          <div className="pro-price">${price}</div>
+          <button className="remove-pro" onClick={removeProduct}>
+            {" "}
+            -{" "}
+          </button>
+          <span className="pro-span"> {product} </span>
+          <button className="add-pro" onClick={addProduct}>
+            {" "}
+            +{" "}
+          </button>
+        </div>
       </div>
     </div>
   );

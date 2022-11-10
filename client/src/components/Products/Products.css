@@ -1,4 +1,15 @@
-.products {
+/* .pop-all {
+  display: flex;
+  justify-content: start;
+  gap: 35px;
+  margin-top: 30px;
+  margin-left: 140px;
+} */
+
+.all-products {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 175px;
+  margin-top: 45px;
+  gap: 65px;
 }
